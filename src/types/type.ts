@@ -1,9 +1,9 @@
-import { AxiosRequestConfig } from "axios";
-import { REQUEST_CONFIG_ENUM } from "./enum";
+import { AxiosRequestConfig } from 'axios';
+import { REQUEST_CONFIG_ENUM } from './enum';
 
-export type Nullable<T> = { 
-  [P in keyof T]: T[P] | null
-}
+export type Nullable<T> = {
+  [P in keyof T]: T[P] | null;
+};
 
 /**
  * 请求配置
@@ -25,8 +25,8 @@ export interface IRequestConfig extends AxiosRequestConfig<any> {
  * @param requestConfig 请求配置
  */
 export interface IRequestParams {
-  url: string,
-  data?: any,
-  headers?: any,
-  requestConfig?: IRequestConfig,
+  url: string;
+  data?: any;
+  headers?: any;
+  requestConfig?: IRequestConfig;
 }

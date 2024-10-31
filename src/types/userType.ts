@@ -1,6 +1,6 @@
-export interface IUserInfoProps{
+export interface IUserInfoProps {
   name: string;
   avatar: string;
   mobile: number;
-  auths: string[]
+  auths: string[];
 }

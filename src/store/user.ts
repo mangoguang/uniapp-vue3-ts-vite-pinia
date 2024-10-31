@@ -1,6 +1,6 @@
 import { IUserInfoProps } from '@/types/userType';
 import { Nullable } from '../types/type';
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 interface IState {
   userInfo: Nullable<IUserInfoProps> | null;
@@ -15,8 +15,8 @@ export const useUserStore = defineStore({
       name: 'guang',
       avatar: '',
       mobile: 0,
-      auths: []
-    }
+      auths: [],
+    },
   }),
   unistorage: {
     paths: ['userInfo'],
@@ -28,7 +28,7 @@ export const useUserStore = defineStore({
   },
   actions: {
     setUserInfo(info: Nullable<IUserInfoProps> | null) {
-      this.userInfo = info ?? null
+      this.userInfo = info ?? null;
     },
     resetState() {
       this.userInfo = null;
@@ -44,4 +44,4 @@ export const useUserStore = defineStore({
     //   }
     // },
   },
-})
+});

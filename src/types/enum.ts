@@ -3,7 +3,7 @@ export enum FIELD_TYPE {
   INPUT = 'input',
   SWITCH = 'switch',
   SELECT = 'selector',
-};
+}
 
 /**
  * 请求配置枚举

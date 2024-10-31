@@ -1,4 +1,4 @@
-export interface IProjectInfoProps{
+export interface IProjectInfoProps {
   name: string;
   id: number;
 }

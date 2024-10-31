@@ -1,3 +1,3 @@
-export const getToken = ():string => {
+export const getToken = (): string => {
   return '';
-}
+};

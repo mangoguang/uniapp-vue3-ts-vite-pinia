@@ -10,15 +10,17 @@ interface IProjectState {
 export const useProjectStore = defineStore({
   id: 'app-project', // 唯一 ID，可以配合 Vue devtools 使用
   state: (): IProjectState => ({
-    projectList: [{
-      name: '测试项目',
-      id: 0
-    }],
+    projectList: [
+      {
+        name: '测试项目',
+        id: 0,
+      },
+    ],
   }),
   unistorage: false,
   actions: {
     setProjectList(info: Nullable<IProjectInfoProps>[] | null) {
       this.projectList = info ?? null;
-    }
+    },
   },
-})
+});
