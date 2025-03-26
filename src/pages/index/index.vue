@@ -14,6 +14,16 @@
       </uni-badge>
       <uni-countdown :day="1" :hour="1" :minute="12" :second="40"></uni-countdown>
     </view>
+    <CustomDatetimePicker />
+
+    <!-- 生成海报 -->
+    <view>
+      <wxml-to-canvas class="widget"></wxml-to-canvas>
+      <button @click="renderToCanvas">渲染到canvas</button>
+      <button bindtap="extraImage">导出图片</button>
+
+      <image :src="imgSrc" style="width: 200px; height: 200px"></image>
+    </view>
   </view>
 </template>
 
@@ -21,10 +31,18 @@
   import { onMounted, ref } from 'vue';
   import { useUserStore } from '@/store/user';
   import { wxLogin } from '@/api/user';
+  import CustomDatetimePicker from '@/components/CustomDatetimePicker/CustomDatetimePicker.vue';
 
+  const imgSrc = ref('');
   const title = ref('Hello');
   const mypopup = ref(null);
   const userStore = useUserStore();
+  const name = 'guang';
+  const fn = () => {
+    name.split('').map((item) => {
+      return item;
+    });
+  };
 
   onMounted(() => {
     console.log('index onMounted', userStore.userInfo ? '2' : 3);
